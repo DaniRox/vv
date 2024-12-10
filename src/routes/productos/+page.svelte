@@ -9,26 +9,31 @@
 <style>
     .Productos{
         background-color: white;
-        padding: 0.5rem 5%;
+        padding: 0.5rem 0;
     }
     h1{
-        margin: 1.5rem 0rem;
+        margin: 1.5rem 5%;
         font-weight: 500;
         font-size: 1.2rem;
     }
     
     @media (min-width: 768px){
         .Productos{
-            padding: 1rem 3%;
+            padding: 1rem 0;
         }
     }
-    
+
+    @media (min-width: 1024px){
+        h1{
+            margin: 1.5rem 3%;
+        }
+    }
 </style>
 
 <div class="Productos" id="Productos">
     <h1>Productos</h1>
     <Container> 
-                  
+        
         <Card
         titulo="Plantines"
         img="/img/lechugamanteca.jpg"
