@@ -1,7 +1,6 @@
 <script>
-// @ts-nocheck
-
 	import Baner from '$lib/components/baner.svelte';
+	import CardProducto from "$lib/components/cardProducto.svelte";
     import Container from '$lib/components/container.svelte';
     import Card from '../../lib/components/card.svelte';
 </script>
@@ -10,6 +9,7 @@
     .Productos{
         background-color: white;
         padding: 0.5rem 0;
+        min-height: 50vh;
     }
     h1{
         margin: 1.5rem 5%;
@@ -22,16 +22,26 @@
             padding: 1rem 0;
         }
     }
-
     @media (min-width: 1024px){
         h1{
             margin: 1.5rem 3%;
         }
     }
+    
 </style>
 
 <div class="Productos" id="Productos">
     <h1>Productos</h1>
+
+    <CardProducto 
+    fotoProducto="/img/img2.jpg"
+    titulo="Este es el titulo del primer producto"
+    precio="50.00"
+    descripcion="descripcion general del producto nuevo vendido"
+    stock="3"
+    cantidad=""
+    />
+
     <Container> 
         
         <Card

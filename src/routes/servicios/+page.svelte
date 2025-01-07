@@ -9,12 +9,16 @@
         font-weight: 500;
         font-size: 1.2rem;
     }
-
+    
     @media (min-width: 1024px){
         h1{
             margin: 1.5rem 3%;
         }
     }
+    .Servicios{
+        min-height: 50vh;
+    }
+
 
 </style>
 

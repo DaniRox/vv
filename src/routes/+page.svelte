@@ -2,7 +2,7 @@
 	import Navbar from './../lib/components/navbar.svelte';
     import '../styles/reset.css';
     import '../styles/colors.css';
-    import Home from '../routes/Home/+page.svelte';
+    import Home from './Home/+page.svelte';
     
 </script>
 
@@ -11,6 +11,12 @@
         font-family: "Roboto", sans-serif;
         font-size: 16px;
     }
+    .main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+   
 
 </style>
 

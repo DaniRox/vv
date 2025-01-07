@@ -129,9 +129,7 @@
     .divcarrito{
         padding-left: 5%;
     }
-    .ingresarmobil{
-
-    }
+    
     .carritoescritorio{
         display: none;
     }
@@ -205,7 +203,6 @@
         .Navbar {
             padding: 1.7rem 5%;
             gap: 1.7rem;
-            
         }
         .link{
             font-size: 1.3rem;

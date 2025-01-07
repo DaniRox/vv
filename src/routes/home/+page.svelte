@@ -3,20 +3,21 @@
     import Baner from '$lib/components/baner.svelte';
     import Container from '$lib/components/container.svelte';
     import Card from '../../lib/components/card.svelte';
-	
+	   
 let images = [  
-    'static/img/ofertas.jpeg',
-    'static/img/plantinesProductos.jpeg',  
-    'https://via.placeholder.com/600x300?text=Image+2',  
-    'https://via.placeholder.com/600x300?text=Image+3',  
-    'https://via.placeholder.com/600x300?text=Image+4',  
+  'static/img/ofertas.jpeg',
+  'static/img/plantinesProductos.jpeg',  
+  'https://via.placeholder.com/600x300?text=Image+2',  
+  'https://via.placeholder.com/600x300?text=Image+3',  
+  'https://via.placeholder.com/600x300?text=Image+4',  
 ];  
 
 </script>
 
 <style>
-    .Home{
+     .Home{
         width: 100%;
+        min-height: 50vh;
     }
 
 </style>
@@ -32,7 +33,7 @@ let images = [
     />
 
     <Container> 
-        
+                  
         <Card
         titulo="Plantines"
         img="/img/lechugamanteca.jpg"

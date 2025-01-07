@@ -55,6 +55,7 @@
             flex-direction: row;
             margin: 3rem 3%;
             width: 94%;
+        
 
         }
         .texto{
