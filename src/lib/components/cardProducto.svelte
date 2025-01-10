@@ -53,7 +53,7 @@
     .infoProducto {
         display: flex;
         flex-direction: column;
-        gap: 0.6rem;
+        gap: 1rem;
     }
 
     .spanPrecio {
@@ -70,6 +70,55 @@
         font-size: 0.8rem;
         font-weight: 600;
         color: var(--plant);
+    }
+
+    .compra {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .botones {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .botonesCantidad {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid var(--plantlithe);
+        width: min-content;
+        height: 2.2rem;
+        border-radius: 0.8rem;
+    }
+    .btnCantidad {
+        width: auto;
+        padding: 0.1rem;
+    }
+    .btnIcon {
+        width: 1.6rem;
+    }
+
+    .divCantidad {
+        width: 2.4rem;
+        height: 100%;
+        padding: 0.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 2px solid var(--plantlithe);
+        border-left: 2px solid var(--plantlithe);
+    }
+
+    .btnCarrito {
+        height: 2.2rem;
+        background-color: var(--plantlithe);
+        padding: 0.5rem 0.8rem;
+        border-radius: 0.8rem;
+        font-size: 1rem;
+        font-weight: 500;
     }
 
 </style>
@@ -93,12 +142,12 @@
         <div class="compra">
             <span class="spanUnidades">{stock} disponibles</span>
             <div class="botones">
-                <div class="cantidad">
-                    <button ><img src="/img/BiDash.svg" alt=""></button>
-                    <span class="spanCantidad">{cantidad}</span>
-                    <button><img src="/img/BiPlus.svg" alt=""></button>
+                <div class="botonesCantidad">
+                    <button class="btnCantidad"><img src="/img/BiDash.svg" alt="" class="btnIcon"></button>
+                    <div class="divCantidad">{cantidad}</div>
+                    <button class="btnCantidad"><img src="/img/BiPlus.svg" alt="" class="btnIcon"></button>
                 </div>
-                <button class= "carrito">Agregar al carrito</button>
+                <button class= "btnCarrito">Agregar al carrito</button>
             </div>
         </div>
     </div>

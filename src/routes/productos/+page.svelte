@@ -39,7 +39,7 @@
     precio="50.00"
     descripcion="descripcion general del producto nuevo vendido"
     stock="3"
-    cantidad=""
+    cantidad="1"
     />
 
     <Container> 
