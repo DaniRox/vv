@@ -38,7 +38,7 @@
     titulo="Este es el titulo del primer producto"
     precio="50.00"
     descripcion="descripcion general del producto nuevo vendido"
-    stock="3"
+    stock="10"
     cantidad="1"
     />
 

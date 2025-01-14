@@ -1,10 +1,24 @@
 <script>
-    export let fotoProducto="#";
-    export let titulo="titulo";
-    export let precio="precioUnitario";
-    export let descripcion="descrpion";
-    export let stock="1";
-    export let cantidad="00";
+    export let fotoProducto = "#";
+    export let titulo = "titulo";
+    export let precio = "precioUnitario";
+    export let descripcion = "descripcion";
+    export let stock = 1;
+    export let cantidad = 1;
+
+    // Función para incrementar la cantidad
+    function incrementar() {
+        if (cantidad < parseInt(stock)) {
+            cantidad = parseInt(cantidad) + 1;
+        }
+    }
+
+    // Función para decrementar la cantidad
+    function decrementar() {
+        if (cantidad > 1) {
+            cantidad = parseInt(cantidad) - 1;
+        }
+    }
 </script>
 
 
@@ -24,9 +38,12 @@
 
     .tituloEscritorio {
         display: none;
+        font-weight: 500;
+        font-size: 1.2rem;
     }
 
     .fotosProducto {
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -56,6 +73,11 @@
         gap: 1rem;
     }
 
+    .infoProducto-text {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
     .spanPrecio {
         font-size: 1.6rem;
         font-weight: 400;
@@ -75,7 +97,7 @@
     .compra {
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 1rem;
     }
     .botones {
         display: flex;
@@ -121,6 +143,33 @@
         font-weight: 500;
     }
 
+
+    @media (min-width: 768px){
+        .cardProducto {
+            flex-direction: row;
+        }
+
+        .tituloMovil{
+            display: none;
+        }
+
+        .tituloEscritorio {
+            display: flex;
+        }
+
+        .fotosProducto {
+            width: 50%;
+        }
+
+        .infoProducto {
+            justify-content: space-between;
+        }
+
+        .botones {
+            gap: 2.5rem;
+        }
+    }
+
 </style>
 
 
@@ -135,21 +184,27 @@
     </div>
 
     <div class="infoProducto">
-        <h1 class="tituloEscritorio">{titulo}</h1>
-        <span class="spanPrecio">${precio}</span>
-        <p class="descripcion"> {descripcion}</p>
+        <div class="infoProducto-text">
+            <h1 class="tituloEscritorio">{titulo}</h1>
+            <p class="descripcion"> {descripcion}</p>
+        </div>
+        
 
         <div class="compra">
+            <span class="spanPrecio">${precio}</span>
             <span class="spanUnidades">{stock} disponibles</span>
             <div class="botones">
                 <div class="botonesCantidad">
-                    <button class="btnCantidad"><img src="/img/BiDash.svg" alt="" class="btnIcon"></button>
+                    <button class="btnCantidad" id="menos" on:click={decrementar}>
+                        <img src="/img/BiDash.svg" alt="" class="btnIcon">
+                    </button>
                     <div class="divCantidad">{cantidad}</div>
-                    <button class="btnCantidad"><img src="/img/BiPlus.svg" alt="" class="btnIcon"></button>
+                    <button class="btnCantidad" id="mas" on:click={incrementar}>
+                        <img src="/img/BiPlus.svg" alt="" class="btnIcon">
+                    </button>
                 </div>
-                <button class= "btnCarrito">Agregar al carrito</button>
+                <button class="btnCarrito">Agregar al carrito</button>
             </div>
         </div>
     </div>
-    
 </div>
